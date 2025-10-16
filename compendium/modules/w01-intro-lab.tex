@@ -10,7 +10,7 @@
 \begin{Preparations}
 \item Repetera veckans föreläsningsmaterial.
 \item \DoExercise{\ExeWeekONE}{01}%Gör övning {\tt \ExeWeekONE} i kapitel \ref{exe:W01}.
-\item Läs om Kojo i appendix \ref{appendix:kojo}. Kojo Desktop är förinstallerat på LTH:s datorer; om du vill installera Kojo Desktop på din egen dator, följ instruktionerna i \ref{appendix:ide:kojo:install}.
+\item Läs om Kojo i appendix \ref{appendix:kojo}.
 \item Läs igenom hela laborationen nedan. Fundera på möjliga lösningar till de uppgifter som är markerade med en penna i marginalen.
 \item Hämta given kod via \href{https://github.com/lunduniversity/introprog/tree/master/workspace/}{kursen github-plats}.
 % \item Ladda hem och studera översiktligt detta dokument (25 sidor, det räcker att du bläddrar igenom dokumentet och får en uppfattning om hur Kojo kan användas): \\ ''Introduction to Kojo'' \url{http://www.kogics.net/kojo-ebooks#intro}
@@ -104,6 +104,30 @@ Om det förekommer en penna i marginalen ska du anteckna något inför redovisni
 
 % \Task Läs om hur du gör grafikprogram med Kojo i Appendix \ref{appendix:kojo} och övning {\tt \ExeWeekONE} i kapitel \ref{exe:W01}.
 
+\Task \textit{Installera och starta Kojo}. Öppna terminalen och skriv in följande kommandon för att ladda filen \texttt{kojo.scala} från internet, spara den i katalogen \texttt{\textasciitilde/w01-kojo}, och starta Kojo.
+
+% \begin{minipage}{\textwidth} % wrap REPLnonum to make it not split at page-breaks
+\vbox{
+\begin{REPLnonum}
+> mkdir ~/w01-kojo
+> cd ~/w01-kojo
+> curl -sLO https://fileadmin.cs.lth.se/kojo.scala
+> scala repl ~/w01-kojo/kojo.scala
+\end{REPLnonum}
+}
+% \end{minipage}
+\vbox{ % avoid page breaks
+Nu borde du kunna skriva \texttt{activateCanvas()} i terminalen, trycka på ENTER, och se ett fönster dyka upp på skärmen.
+
+\begin{REPLnonum}
+Welcome to Scala 3.7.3 (21.0.8, Java OpenJDK 64-Bit Server VM).
+Type in expressions for evaluation. Or try :help.
+
+scala> activateCanvas()
+
+scala> 
+\end{REPLnonum}
+}
 
 \Task \textit{Sekvens och repetition}. Rita en kvadrat med hjälp av \code+upprepa(n){ ??? }+ där du ersätter \code{n} med antalet repetitioner och \code{???} med de satser som ska repeteras.
 
